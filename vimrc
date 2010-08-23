@@ -73,7 +73,6 @@ vmap <S-Tab> <gv
 nmap <S-Tab> <C-W><C-W>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
-
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
@@ -105,9 +104,110 @@ map <left> :bp<cr>
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au FileType xhtml,xml,erb,html.erb ru ftplugin/html/autoclosetag.vim
 
+" for snipmate
+au BufRead *.html.erb set ft=html.eruby
+au BufNewFile *.html.erb set ft=html.eruby
+ 
 
 nnoremap <c-f> :FuzzyFinderTextMate<CR>
 
-" autosave buffers on switch
-set autowrite
+map <F1> :FuzzyFinderBuffer<CR>
+map <F2> :FuzzyFinderFile<CR>
+
+map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=files --exclude=public  --exclude=vendor .<CR>
+
+
+" limit number of results shown for performance
+let g:fuzzy_matching_limit=60
+" ignore stuff that can't be openned, and generated files
+let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+
+  " increate the number of files scanned for very large projects
+let g:fuzzy_ceiling=20000
+  " display relative path, instead of abbrevated path (lib/jeweler.rb vs
+  " l/jeweler.rb)
+let g:fuzzy_path_display = 'relative_path'
+
+" Add RebuildTagsFile function/command
+function! s:RebuildTagsFile()
+  !ctags -R --exclude=coverage --exclude=files --exclude=public --exclude=log --exclude=tmp --exclude=vendor *
+endfunction
+command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
+map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=files --exclude=public  --exclude=vendor .<CR>
+set tags =./tags;
+
+
+" vimacs stuff
+imap <C-b> <Left>
+vmap <C-b> <Left>
+omap <C-b> <Left>
+imap <C-f> <Right>
+vmap <C-f> <Right>
+omap <C-f> <Right>
+imap <C-p> <Up>
+vmap <C-p> <Up>
+omap <C-p> <Up>
+imap <C-n> <Down>
+vmap <C-n> <Down>
+omap <C-n> <Down>
+inoremap <M-f> <C-o>e<Right>
+vnoremap <M-f> e<Right>
+onoremap <M-f> e<Right>
+inoremap <M-b> <C-Left>
+vnoremap <M-b> <C-Left>
+onoremap <M-b> <C-Left>
+imap <C-a> <Home>
+vmap <C-a> <Home>
+omap <C-a> <Home>
+imap <C-e> <End>
+vmap <C-e> <End>
+omap <C-e> <End>
+inoremap <M-a> <C-o>(
+vnoremap <M-a> (
+onoremap <M-a> (
+inoremap <M-e> <C-o>)
+vnoremap <M-e> )
+onoremap <M-e> )
+inoremap <C-d> <Del>
+vnoremap <C-d> <Del>
+onoremap <C-d> <Del>
+inoremap <M-<> <C-o>1G<C-o>0
+vnoremap <M-<> 1G0
+onoremap <M-<> 1G0
+inoremap <M->> <C-o>G<C-o>$
+vnoremap <M->> G$
+onoremap <M->> G$
+inoremap <C-v> <PageDown>
+vnoremap <C-v> <PageDown>
+onoremap <C-v> <PageDown>
+inoremap <M-v> <PageUp>
+vnoremap <M-v> <PageUp>
+onoremap <M-v> <PageUp>
+inoremap <M-m> <C-o>^
+vnoremap <M-m> ^
+onoremap <M-m> ^
+inoremap <C-x>= <C-g>
+vnoremap <C-x>= <C-g>
+onoremap <C-x>= <C-g>
+inoremap <silent> <M-g> <C-o>:call <SID>GotoLine()<CR>
+vnoremap <silent> <M-g> :<C-u>call <SID>GotoLine()<CR>
+onoremap <silent> <M-g> :call <SID>GotoLine()<CR>
+" Phear, <M-g> works properly even in Visual/Operator-Pending
+" modes :)  (It's rather dangerous with the latter, though ...)
+inoremap <M-Left> <S-Left>
+vnoremap <M-Left> <S-Left>
+onoremap <M-Left> <S-Left>
+inoremap <M-Right> <S-Right>
+vnoremap <M-Right> <S-Right>
+onoremap <M-Right> <S-Right>
+inoremap <C-Up> <C-o>{
+vnoremap <C-Up> {
+onoremap <C-Up> {
+inoremap <C-Down> <C-o>}
+vnoremap <C-Down> }
+onoremap <C-Down> }
+
 
