@@ -210,4 +210,5 @@ inoremap <C-Down> <C-o>}
 vnoremap <C-Down> }
 onoremap <C-Down> }
 
-
+" autosave if i switch buffers
+set autowrite

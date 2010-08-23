@@ -141,6 +141,17 @@ g:SuperTabMappingTabLiteral	supertab.txt	/*g:SuperTabMappingTabLiteral*
 g:SuperTabMidWordCompletion	supertab.txt	/*g:SuperTabMidWordCompletion*
 g:SuperTabRetainCompletionDuration	supertab.txt	/*g:SuperTabRetainCompletionDuration*
 remapping-CTRL_O	vimacs.txt	/*remapping-CTRL_O*
+ruby-debugger	ruby_debugger.txt	/*ruby-debugger*
+ruby-debugger-about	ruby_debugger.txt	/*ruby-debugger-about*
+ruby-debugger-bugs	ruby_debugger.txt	/*ruby-debugger-bugs*
+ruby-debugger-details	ruby_debugger.txt	/*ruby-debugger-details*
+ruby-debugger-installation	ruby_debugger.txt	/*ruby-debugger-installation*
+ruby-debugger-introduction	ruby_debugger.txt	/*ruby-debugger-introduction*
+ruby-debugger-issues	ruby_debugger.txt	/*ruby-debugger-issues*
+ruby-debugger-plugin-author	ruby_debugger.txt	/*ruby-debugger-plugin-author*
+ruby-debugger-quickstart	ruby_debugger.txt	/*ruby-debugger-quickstart*
+ruby-debugger-tests	ruby_debugger.txt	/*ruby-debugger-tests*
+ruby_debugger.txt	ruby_debugger.txt	/*ruby_debugger.txt*
 supertab	supertab.txt	/*supertab*
 supertab-completioncontexts	supertab.txt	/*supertab-completioncontexts*
 supertab-contextdefault	supertab.txt	/*supertab-contextdefault*
