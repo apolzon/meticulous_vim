@@ -31,5 +31,4 @@ F6 for switch to last buffer
 
 == Copyright
 
-Copyright (c) 2010 Rob Conery. See LICENSE for details.
-
+Copyright (c) 2010 Scott Schulthess
