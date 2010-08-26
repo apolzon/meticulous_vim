@@ -14,6 +14,8 @@ runtime macros/matchit.vim        " Load the matchit plugin.
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
+set nostartofline  								" when siwtching buffers and cursor positions dont jump to the start of the line
+
 set backspace=indent,eol,start    " Intuitive backspacing.
 
 set hidden                        " Handle multiple buffers better.

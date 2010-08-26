@@ -1,9 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/sschulthess/trunks/inventory_service_trunk'
-let g:netrw_dirhist_2='/Users/sschulthess/tickets/weights'
-let g:netrw_dirhist_3='/Users/sschulthess/trunks/student_advisor'
-let g:netrw_dirhist_4='/Users/sschulthess/tickets/cc_lander_1/front_end_trunk'
-let g:netrw_dirhist_5='/Users/sschulthess/trunks/student_advisor'
-let g:netrw_dirhist_6='/Users/sschulthess/tickets/weights'
-let g:netrw_dirhist_7='/Users/sschulthess/tickets/weights_backup'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/sschulthess/tickets/cc_lander_1/front_end_trunk'
+let g:netrw_dirhist_2='/Users/sschulthess/tickets/cc_lander_1/front_end_trunk/vendor/plugins/log_service_client'
+let g:netrw_dirhist_3='/Users/sschulthess/tickets/weights'
