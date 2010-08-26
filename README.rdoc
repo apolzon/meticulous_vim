@@ -1,4 +1,5 @@
 = My Vim Config 
+They aren't very meticulously set up, but vim is so win. 
 
 = Credits
 This is based mostly based on rob cornery's vim files 
