@@ -28,6 +28,209 @@ F1 for buffer switcher
 F2 for file search 
 F6 for switch to last buffer
 
+== Cheat Sheet ==
+
+TODO
+* understand tags better, read about it, look for how to search for usages of a tag and not just tag definitions?
+* get a better ack, ideally one that shows results as you type
+* emacs key bindings http://www.vim.org/scripts/script.php?script_id=300
+* suversion ibntegration http://www.vim.org/scripts/script.php?script_id=90
+NERDTree
+	:NERDTreeFind open nerd tree current file
+	m  # add child node
+	QUICKNAAV
+	:set nu
+	then you can just #G to it 
+	also you can use /dirname to quickly navigate to a dir
+	
+	C.......Change the tree root to the selected dir.................|NERDTree-C|
+	u.......Move the tree root up one directory......................|NERDTree-u|
+	U.......Same as 'u' except the old root node is left open........|NERDTree-U|
+	r.......Recursively refresh the current directory................|NERDTree-r|
+	R.......Recursively refresh the current root.....................|NERDTree-R|
+	m.......Display the NERD tree menu...............................|NERDTree-m|
+	cd......Change the CWD to the dir of the selected node...........|NERDTree-cd|
+
+SUPERTAB: 
+	Select Entry: SHIFT+ENTER
+COMMAND LINE / 2 MODE
+	CTRL-B cursor to beginning of command-line
+	CTRL-E cursor to end of command-line
+	<C-Left> cursor one WORD left
+	<C-Right>		cursor one WORD right
+    CTRL-W          Delete the |word| before the cursor.  This depends on the
+	                'iskeyword' option.
+					                                                        *c_CTRL-U*
+	CTRL-U          Remove all characters between the cursor position and
+	                the beginning of the line.  Previous versions of vim
+	                deleted all characters on the line.  If that is the
+	                preferred behavior, add the following to your .vimrc: >
+	                        :cnoremap <C-U> <C-E><C-U>
+
+CTAGS
+  map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+   alternative
+  ctags -R --exlude=.svn --exclude=log *
+  CTRL+[  - go to definition
+
+INSERT MODE
+	" map CTRL-E to end-of-line (insert mode)
+	imap <C-e> <esc>$i<right>
+	" map CTRL-A to beginning-of-line (insert mode)
+	imap <C-a> <esc>0i
+	more: http://vimdoc.sourceforge.net/htmldoc/insert.html
+	:h insert-index
+
+REDO: CTRL-R
+
+
+SNIPMATE
+	shnb	- .should_not be
+  *list-snippets* 
+	:set ft=html.eruby # set filetype of current file to be html and erbuy
+	
+	
+RAILS.VIM
+	:A (edit alternate file)
+  :AS (in split)
+  :AV (in vertical split)
+	:Rgenerate controller Blog
+	
+FILES 
+  :e **/filename 
+	:Rgenerate migration
+
+
+QUICK EDITING
+	I insert at the begin.
+	A append to end.
+	o / O open a new line after/before the current.
+	cc - change (replace) an entire line
+	cw - change (replace) to the end of word
+	ciw - change inner word (reglardess of cursor)
+DIRECTORIES
+	:!mkdir my_project
+	:!rails my_project
+	ea - insert at end of word
+
+BUFFERS
+	:BD will close the current buffer. 
+	CTRL-^ Switch buffer
+	:ls View the list of buffers along with their numbers.
+	:!ls view all unlisted buffers
+	:bf[irst]	Go to the first buffer.
+	:bl[ast] RIGHT	Go to the last buffer.
+	:bn or LEFT   Go to next buffer
+	:b [file]. Fantastic for quickly switching between buffers. You can give it just part of a file name and it will jump to the buffer that matches.
+	
+
+SPLIT 
+	Ctrl-w Ctrl-w moves between Vim viewports.
+	Ctrl-w q will close the active window.
+	:on make this the on;ly window
+	CTRL-W CTRL-O	 make this the only window
+	# ctrl+ws - Split windows
+	# ctrl+ww - switch between windows
+	# ctrl+wq - Quit a window
+	# ctrl+wv - Split windows vertically
+	
+
+DELETING 
+ x normal mode delete
+
+EDITING
+	:dw delete word
+	:dd delete line
+
+IDENTATION
+  ={ autoindent block of code
+	> and < to ident a selected block - use . to repeat
+	. Repeat last text-changing command
+  <Ctrl>-<Shift>-t to indent (mnemonic: tab), and
+  <Ctrl>-<Shift>-d to unident (mnemonic: de-tab/indent).
+  == to auto-indent the current line.
+	=%  ident a function?
+
+NAVIGATION
+	0  	To the beginning of a line.
+	A end of line or $
+	Forward Paragraph Shift-] or }
+	ctrl-o to jump to the previous location and ctrl-i to jump forward to the next location again. 
+	Shift-Up Arrow = Page up
+	^  	To the first non-blank character of the line
+  :jumps 
+  G End of file
+  gg top of file
+  Ctrl-o  moves the cursor to the last jump.
+	Ctrl-i moves the cursor to the previous jump.
+	H moves the cursor to the top of the screen or viewport.
+	M moves the cursor to the middle of the screen or viewport.
+	L moves the cursor to the bottom of the screen or viewport.
+	
+	z.			Redraw, line [count] at center of window (default
+				cursor line).  Put cursor at first non-blank in the
+				line.
+
+								*zz*
+	zz			Like "z.", but leave the cursor in the same column.
+				Careful: If caps-lock is on, this command becomes
+				"ZZ": write buffer and exit!  {not in Vi}
+
+				zt			Like "z<CR>", but leave the cursor in the same
+							column.  {not in Vi}
+
+	type in numbers: = nav
+
+Command Mode Navigation
+  Control-F: page down
+	Control-b: page up
+
+
+MISC
+	:set nonumber " disable line numbers
+	:set lines=100 columns=400 
+	:cl bring up old ack list
+	Jump to a subject:  Position the cursor on a tag (e.g. |bars|) and hit CTRL-]. (link)
+	Jump back:  Type CTRL-T or CTRL-O (repeat to go further back).
+	:e /usr/share/vim/vim72/tutor/tutor  
+	set list! Turn off show invisibles
+	
+	List Current Scripts
+	" where was an option set
+	:scriptnames : list all plugins, _vimrcs loaded (super)
+	:verbose set history? : reveals value of history and where set
+	:function : list functions
+	:func SearchCompl : List particular function
+	
+	You can quickly and easily reload your vimrc with the following command.
+
+	:source $MYVIMRC
+
+	If you want to know what your current vimrc is, just do the following.
+
+	:echo $MYVIMRC
+	
+
+	:h slash< CTRL-d > to get a list of all help topics containing the word 'slash'. http://is.gd/7Onk
+BROWSING DIRECTORIES
+ :Ex (mnemonic: Explore) opens up the current file in browser
+
+SEARCH AND REPLACE
+  :%s/target/replacement/g
+
+	you can search and replace on multiple files by typing
+	:args **/*.java ---> open all java files under current directory (inside buffer)
+	:argdo %s:search_for_something:replace_with_anything:g |w --> additional w means save to file without acknowledge us
+
+
+http://vim.1045645.n5.nabble.com/fuzzy-finder-how-to-get-it-find-files-from-root-of-my-current-dir-located-in-any-subdirectory-td1181895.html
+
+
+Found a post on another site. Solution append **/ after FuFile
+
+so my mapping is now:
+
+map <leader>f :FufFile **/<CR>
 
 
 == Copyright
