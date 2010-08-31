@@ -35,6 +35,8 @@ TODO
 * get a better ack, ideally one that shows results as you type
 * emacs key bindings http://www.vim.org/scripts/script.php?script_id=300
 * suversion ibntegration http://www.vim.org/scripts/script.php?script_id=90
+* remap FuzzyFinder keys as the function keys suck
+
 NERDTree
 	:NERDTreeFind open nerd tree current file
 	m  # add child node
