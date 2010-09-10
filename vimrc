@@ -1,7 +1,11 @@
 " Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
-
+let mapleader = ","
 set nocompatible                  " Must come first because it changes other options.
+
+map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>f :FuzzyFinderFile<CR>
+
 
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
@@ -114,6 +118,9 @@ au BufNewFile *.html.erb set ft=html.eruby
 nnoremap <c-f> :FuzzyFinderTextMate<CR>
 
 map <F1> :FuzzyFinderBuffer<CR>
+
+nnoremap map <leader>b :FuzzyFinderBuffer<CR>
+
 map <F2> :FuzzyFinderFile<CR>
 
 map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=files --exclude=public  --exclude=vendor .<CR>
