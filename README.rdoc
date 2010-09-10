@@ -23,11 +23,13 @@ that one that makes "end" statements appear when you start a function
 Ack for searching
 
 == Custom key bindings
-
-F1 for buffer switcher
-F2 for file search 
-F6 for switch to last buffer
-
+, as leader aka my custom shortcut 
+,b = buffer browser/searcher FuzzyFinderBuffer
+,f = fuzzyfinder file 
+wanted:
+,l NERDTreeFind (opens nerdtree to the current file highlighted
+,s last buffer?
+,a ack in project?
 == Cheat Sheet ==
 
 TODO
