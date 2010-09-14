@@ -4,7 +4,8 @@ let mapleader = ","
 set nocompatible                  " Must come first because it changes other options.
 
 map <leader>b :FuzzyFinderBuffer<CR>
-map <leader>f :FuzzyFinderFile<CR>
+map <leader>f :FuzzyFinderFile \*\*\/<CR>
+
 
 
 silent! call pathogen#runtime_append_all_bundles()
