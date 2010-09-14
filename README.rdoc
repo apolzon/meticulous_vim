@@ -29,7 +29,9 @@ Ack for searching
 wanted:
 ,l NERDTreeFind (opens nerdtree to the current file highlighted
 ,s last buffer?
-,a ack in project?
+,a ack in project,l NERDTreeFind (opens nerdtree to the current file highlighted
+,s last buffer?
+,a ack in project??
 == Cheat Sheet ==
 
 TODO
@@ -54,6 +56,10 @@ NERDTree
 	R.......Recursively refresh the current root.....................|NERDTree-R|
 	m.......Display the NERD tree menu...............................|NERDTree-m|
 	cd......Change the CWD to the dir of the selected node...........|NERDTree-cd|
+
+COPY PASTE
+  copy the current line: yy
+  paste: p
 
 SUPERTAB: 
 	Select Entry: CTRL - Y
