@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/sschulthess/tickets/cc_lander_1/front_end_trunk'
 let g:netrw_dirhist_2='/Users/sschulthess/tickets/cc_lander_1/front_end_trunk/vendor/plugins/log_service_client'
 let g:netrw_dirhist_3='/Users/sschulthess/tickets/weights'
 let g:netrw_dirhist_4='/Users/sschulthess/tickets/new_weights'
 let g:netrw_dirhist_5='/Users/sschulthess/trunks/back_end_trunk'
+let g:netrw_dirhist_6='/Users/sschulthess/tickets/weights_sql'
+let g:netrw_dirhist_7='/Users/sschulthess/trunks/sem_data_plugin'
+let g:netrw_dirhist_8='/Users/sschulthess/trunks/front_end_trunk'

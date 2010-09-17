@@ -6,7 +6,7 @@ set nocompatible                  " Must come first because it changes other opt
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>f :FuzzyFinderFile \*\*\/<CR>
 
-
+set columns=200
 
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
@@ -58,7 +58,7 @@ set shiftwidth=2                 " And again, related.
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%{getcwd()}\ \ %P
 
 " Or use vividchalk
 colorscheme vividchalk

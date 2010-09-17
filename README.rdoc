@@ -112,6 +112,7 @@ FILES
 
 
 QUICK EDITING
+	ci' change text within quotes
 	I insert at the begin.
 	A append to end.
 	o / O open a new line after/before the current.
@@ -185,9 +186,9 @@ NAVIGATION
 	zz			Like "z.", but leave the cursor in the same column.
 				Careful: If caps-lock is on, this command becomes
 				"ZZ": write buffer and exit!  {not in Vi}
-
-				zt			Like "z<CR>", but leave the cursor in the same
-							column.  {not in Vi}
+				
+	zt - change the viewport so that the cursor is at the top
+	z- - change the viewport so that the cursor is at the bottom
 
 	type in numbers: = nav
 
@@ -203,7 +204,7 @@ MISC
 	    * To jump to a matching C/C++ preprocessor conditional: #if, #ifdef, #else, #elif, #endif.
 	    * To jump between appropriate keywords, if supported by the ftplugin file, for example, between begin and end in a Pascal program. 
 
-
+	:set stl? print current statusline	
 	:set nonumber " disable line numbers
 	:set lines=100 columns=400 
 	:cl bring up old ack list
