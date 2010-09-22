@@ -32,6 +32,11 @@ set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
 set number                        " Show line numbers.
+
+" NEW
+set relativenumber 								" show line numbers relative to current cursor position, new, expiremental
+
+set undofile                      " vim no saves a .un~ file that contain all you historical undo info 
 set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.

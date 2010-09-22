@@ -60,7 +60,7 @@ NERDTree
 	cd......Change the CWD to the dir of the selected node...........|NERDTree-cd|
 	i.......Open selected file in a split window.....................|NERDTree-i|
 	gi......Same as i, but leave the cursor on the NERDTree..........|NERDTree-gi|
-	s.......Open selected file in a new vsplit.......................|NERDTree-s|
+	gs.......Open selected file in a new vsplit.......................|NERDTree-s|
 
 COPY PASTE
   copy the current line: yy
