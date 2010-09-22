@@ -58,7 +58,7 @@ set shiftwidth=2                 " And again, related.
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-set statusline=\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%{getcwd()}\ \ %P
+set statusline=\%t\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%{getcwd()}\ \ %P
 
 " Or use vividchalk
 colorscheme vividchalk
@@ -222,3 +222,5 @@ onoremap <C-Down> }
 
 " autosave if i switch buffers
 set autowrite
+:au FocusLost * :wa
+

@@ -11,6 +11,8 @@ By default, Vim will look for these files in your root, so you'll need to alias 
 	ln -s .vimrc ~/VimSettings/vimrc
 	ln -s .gvimrc ~/VimSettings/gvimrc
 	ln -s .vim ~/VimSettings
+	
+
 
 
 == Highlighted plugins
@@ -23,6 +25,8 @@ that one that makes "end" statements appear when you start a function
 Ack for searching
 
 == Custom key bindings
+
+I highly recommend remapping ESCAPE to CAPSLOCK.  It'll speed things up and save your pinky.  
 , as leader aka my custom shortcut 
 ,b = buffer browser/searcher FuzzyFinderBuffer
 ,f = fuzzyfinder file 
@@ -52,17 +56,20 @@ NERDTree
 	C.......Change the tree root to the selected dir.................|NERDTree-C|
 	u.......Move the tree root up one directory......................|NERDTree-u|
 	U.......Same as 'u' except the old root node is left open........|NERDTree-U|
-	r.......Recursively refresh the current directory................|NERDTree-r|
-	R.......Recursively refresh the current root.....................|NERDTree-R|
 	m.......Display the NERD tree menu...............................|NERDTree-m|
 	cd......Change the CWD to the dir of the selected node...........|NERDTree-cd|
+	i.......Open selected file in a split window.....................|NERDTree-i|
+	gi......Same as i, but leave the cursor on the NERDTree..........|NERDTree-gi|
+	s.......Open selected file in a new vsplit.......................|NERDTree-s|
 
 COPY PASTE
   copy the current line: yy
   paste: p
 
 SUPERTAB: 
-	Select Entry: CTRL - Y
+	Select Entry: CTRL - Y   or ESCAPE
+	
+	
 COMMAND LINE / 2 MODE
 	CTRL-B cursor to beginning of command-line
 	CTRL-E cursor to end of command-line
