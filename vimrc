@@ -65,6 +65,12 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=\%t\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%{getcwd()}\ \ %P
 
+"searching
+set gdefault  " no longer have to type /g at the end of searches
+noremap <leader><space> :noh<cr>
+
+
+
 " Or use vividchalk
 colorscheme vividchalk
 
@@ -78,6 +84,10 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
+nnoremap <leader>a :Ack 
+
+
 imap <Tab> <C-N>
 imap <S-Tab> <C-P>
 vmap <Tab> >gv
@@ -86,8 +96,8 @@ nmap <S-Tab> <C-W><C-W>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 " Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
+nnoremap ; :
+"nnoremap : ;  " watchout, may break plugins
 
 "vnoremap ; :
 "vnoremap : ;

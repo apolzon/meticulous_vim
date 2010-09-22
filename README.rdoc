@@ -45,6 +45,9 @@ TODO
 * suversion ibntegration http://www.vim.org/scripts/script.php?script_id=90
 * remap FuzzyFinder keys as the function keys suck
 
+FuzzyFileFinder
+  ,b quick search buffers.
+  CTRL+K in buffer explorer, open current seleted file in veritcal split
 NERDTree
 	:NERDTreeFind open nerd tree current file
 	m  # add child node
