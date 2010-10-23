@@ -8,9 +8,9 @@ This is based mostly based on rob cornery's vim files
 The simplest thing you can do is to create a "VimSettings" directory somewhere on your drive. Mines in my home root (~/). Just do a git clone from this repo and put it to your drive somewhere, then you need to setup some aliases to point to the vimrc and gvimrc files.
 
 By default, Vim will look for these files in your root, so you'll need to alias them like this:
-	ln -s .vimrc ~/VimSettings/vimrc
-	ln -s .gvimrc ~/VimSettings/gvimrc
-	ln -s .vim ~/VimSettings
+	ln -s ~/VimSettings/vimrc .vimrc 
+	ln -s ~/VimSettings/gvimrc .gvimrc 
+	ln -s ~/VimSettings .vim 
 	
 
 
